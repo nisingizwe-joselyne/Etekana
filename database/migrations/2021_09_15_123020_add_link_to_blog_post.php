@@ -14,7 +14,7 @@ class AddLinkToBlogPost extends Migration
     public function up()
     {
         Schema::table('blog_post', function (Blueprint $table) {
-            $table->string('link')->after('title');
+            // $table->string('link')->after('title');
         });
     }
 

@@ -138,20 +138,12 @@
                 <table class="uk-table uk-table-justify uk-table-middle uk-table-divider">
                   <tbody>
                     <tr class="uk-text-primary">
-                      <td class="uk-table-expand"><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="{{$topic->linkone}}" data-uk-toggle>{{$topic->subtopicone}}</a></td>
+					@foreach($subtitles as $subtitle)   	
+                      <td class="uk-table-expand"><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="{{$subtitle->link}}" data-uk-toggle>{{$topic->subtopicone}}</a></td>
                       <td><span data-uk-icon="unlock"></span></td>
                       <td class="uk-table-shrink">04:24</td>
-                    </tr>
-                    <tr class="uk-text-primary">
-                      <td><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="{{$topic->linktwo}}" data-uk-toggle>{{$topic->subtopictwo}}</a></td>
-                      <td><span data-uk-icon="unlock"></span></td>
-                      <td>04:24</td>
-                    </tr>
-                    <tr class="uk-text-muted">
-                      <td><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="{{$topic->linkthree}}" data-uk-toggle>{{$topic->subtopicthree}}</a></td>
-                      <td><span data-uk-icon="lock"></span></td>
-                      <td>04:24</td>
-                    </tr>                  
+					@endforeach
+                    </tr>                
                   </tbody>
                 </table>
               </div>

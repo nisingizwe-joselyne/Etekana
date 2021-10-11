@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="sticky-header-reveal">
 	<head>
@@ -22,7 +21,10 @@
 
 		<!-- Web Fonts  -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css')}}">
-
+         <!-- for navbar -->
+		 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&amp,display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('front/css/main.css')}}"/>
+  
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
 		<link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
@@ -54,72 +56,63 @@
 
 		<!-- Head Libs -->
 		<script src="{{asset('vendor/modernizr/modernizr.min.js')}}"></script>
-
+		<!-- navbar -->
+        <script src="{{ asset('front/js/uikit.js')}}"></script>
 	</head>
 	<body>
 
 		<div class="body">
-			<header id="header" class="header-floating-bar" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'reveal', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 116, 'stickySetTop': '0px', 'stickyChangeLogo': false}">
-				<div class="header-body bg-color-dark box-shadow-none">
-					<div class="header-container header-container-height-sm container">
-						<div class="header-row">
-							<div class="header-column">
-								<div class="header-row">
-									<div class="header-logo">
-										<a href="/">
-									    My e-safety 
-										</a>
-									</div>
-                                    <ul>
-                                        <li  id="google_translate_element">	
-                                        </li>
-                                    </ul>
-								</div>
-							</div>
-							<div class="header-column justify-content-end mr-lg-4">
-								<div class="header-row">
-									<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-force-light-text header-nav-force-light-text-active-skin-color order-2 order-lg-1">
-										<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-dropdown-no-borders header-nav-main-clone-items header-nav-main-slide header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
-											<nav class="collapse">
-												<ul class="nav nav-pills" id="mainNav">
-													<li>
-														<a class="nav-link active" href="/">
-															Home
-														</a>
-													</li>
-                                                    
-													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="#">
-															courses
-														</a>
-														
-														 <ul class="dropdown-menu">
-														   @foreach($courses as $course) 
-															<li><a class="dropdown-item" href="/detail/{{$course->id}}}">{{$course->title}}</a></li>
-															@endforeach
-														 </ul>
-														 
-													</li>
-													
-													<li>
-														<a class="nav-link" href="#">
-															Contact Us
-														</a>
-													</li>
-												</ul>
-											</nav>
-										</div>
-										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="#">Join Now</a>
-										<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
-											<i class="fas fa-bars"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
+        <header id="header">
+	<div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent ; top: #header">
+	  
+
+    <nav class="uk-navbar-container uk-letter-spacing-small uk-text-bold">
+	    <div class="uk-container">
+	      <div class="uk-position-z-index" data-uk-navbar>
+	        <div class="uk-navbar-left">
+	          <a class="uk-navbar-item uk-logo" href="/">e-tekana</a>
+	        </div>
+	        <div class="uk-navbar-right">
+	          <ul class="uk-navbar-nav uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
+	            <li class="{{Request::is('/')? 'uk-actve': ' '}}"><a href="/">Home</a></li>
+	            <li class="{{Request::is('/')? 'uk-actve': ' '}}">
+                <a href="/">Events</a>
+                </li>
+	            <li >
+	              <a href="#">Courses</a>
+	              <div class="uk-navbar-dropdown">
+	                <ul class="uk-nav uk-navbar-dropdown-nav">
+	                  <li ><a href="#">Course</a></li>
+	                  <li ><a href="#">Event</a></li>
+	                  <li ><a href="#">Search</a></li>
+	                  <li ><a href="/login">Sign In</a></li>
+	                  <li ><a href="/registration">Sign Up</a></li>
+	                </ul>
+	              </div>            
+	            </li>
+	          </ul>
+	          <div>
+	            <a class="uk-navbar-toggle" data-uk-search-icon href="#"></a>
+	            <div class="uk-drop uk-background-default" data-uk-drop="mode: click; pos: left-center; offset: 0">
+	              <form class="uk-search uk-search-navbar uk-width-1-1">
+	                <input class="uk-search-input uk-text-demi-bold" type="search" placeholder="Search..." autofocus>
+	              </form>
+	            </div>
+	          </div>
+
+	          <div class="uk-navbar-item">
+	            <div><a class="uk-button uk-button-primary-light" href="/registration">Sign Up</a></div>
+	          </div>          
+	          <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span
+	            data-uk-navbar-toggle-icon></span></a>
+	        </div>
+	      </div>
+	    </div>
+	  </nav>
+	</div>
+
+ </header>	
+
 
 			<div role="main" class="main">
 				
@@ -161,18 +154,8 @@
 									data-start="800"
 									data-startslide="0"
 									data-endslide="99"
-									data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 12px;">By empowering women in digital security </div>
+									data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 12px;">By empowering women with digital security skills </div>
 
-								<a href="/" class="btn btn-primary tp-caption text-uppercase text-color-light custom-font-weight-medium tp-static-layer"
-									data-x="center" data-hoffset="0"
-									data-y="center" data-voffset="80"
-									data-start="1500" 
-									data-startslide="0"
-									data-endslide="99"
-									data-fontsize="['15','15','15','24']"
-									data-lineheight="['17','17','17','26']"
-									style="padding: 15px 25px;"
-									data-transform_in="y:[-300%];opacity:0;s:500;">Join Now</a>
 							</div>
 						</div>
 					</div>
@@ -184,7 +167,7 @@
 							<div class="col-lg-10">
 								<h2 class="font-weight-bold text-color-quaternary appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><span class="text-color-primary">Get Up!</span> Secure your digital information yourself</h2>
 								<p class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="150"> We need to make attention on our safety especially in these time that technology is advancing ,the more the technology increase the more online criminals especially online GBV increase .so do you think that you need to know more about your online safety?
-                                don't worry!! my e-safety platform is here for your digital security guidance.
+                                don't worry!!Etekana platform is here for your digital security career and guidance.
                                 </p>
 								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium text-2 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300" href="#">how it works</a>
 							</div>

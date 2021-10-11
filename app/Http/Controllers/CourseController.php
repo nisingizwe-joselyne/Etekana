@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\course;
 use App\Models\topic;
 use App\Models\BlogPost;
+use App\Models\subtitle;
 class CourseController extends Controller
 {
     public function index ()
@@ -18,7 +19,8 @@ class CourseController extends Controller
     public function show($id)
     { 
         $topics = topic::all();
+        $subtitles = subtitle::all();
         $course = course::findOrFail($id);
-        return view('detail',compact('course','topics'));                                  
+        return view('detail',compact('course','topics','subtitles'));                                  
     }
 }
