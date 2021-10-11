@@ -62,56 +62,71 @@
 	<body>
 
 		<div class="body">
-        <header id="header">
-	<div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent ; top: #header">
-	  
+		<header id="header" class="header-floating-bar" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'reveal', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 116, 'stickySetTop': '0px', 'stickyChangeLogo': false}">
+				<div class="header-body bg-color-dark box-shadow-none">
+					<div class="header-container header-container-height-sm container">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="/">
+											Her e-safety
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-column justify-content-end mr-lg-4">
+								<div class="header-row">
+									<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-force-light-text header-nav-force-light-text-active-skin-color order-2 order-lg-1">
+										<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-dropdown-no-borders header-nav-main-clone-items header-nav-main-slide header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
+											<nav class="collapse">
+												<ul class="nav nav-pills" id="mainNav">
+													<li>
+														<a class="nav-link active" href="/">
+															Home
+														</a>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="demo-gym-classes.html">
+															Courses
+														</a>
+														@foreach($courses as $course)
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item" href="/details/{{$course->id}}">{{$course->title}}</a></li>
+														</ul>
+                                                        @endforeach
+													</li>
+													
+													<li>
+														<a class="nav-link" href="/contact">
+															Contact Us
+														</a>
+													</li>
+												</ul>
+										  @if (Route::has('login'))
+                                            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                             @auth
+                                               <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                                              @else
+                                               <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
-    <nav class="uk-navbar-container uk-letter-spacing-small uk-text-bold">
-	    <div class="uk-container">
-	      <div class="uk-position-z-index" data-uk-navbar>
-	        <div class="uk-navbar-left">
-	          <a class="uk-navbar-item uk-logo" href="/">e-tekana</a>
-	        </div>
-	        <div class="uk-navbar-right">
-	          <ul class="uk-navbar-nav uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
-	            <li class="{{Request::is('/')? 'uk-actve': ' '}}"><a href="/">Home</a></li>
-	            <li class="{{Request::is('/')? 'uk-actve': ' '}}">
-                <a href="/">Events</a>
-                </li>
-	            <li >
-	              <a href="#">Courses</a>
-	              <div class="uk-navbar-dropdown">
-	                <ul class="uk-nav uk-navbar-dropdown-nav">
-	                  <li ><a href="#">Course</a></li>
-	                  <li ><a href="#">Event</a></li>
-	                  <li ><a href="#">Search</a></li>
-	                  <li ><a href="/login">Sign In</a></li>
-	                  <li ><a href="/registration">Sign Up</a></li>
-	                </ul>
-	              </div>            
-	            </li>
-	          </ul>
-	          <div>
-	            <a class="uk-navbar-toggle" data-uk-search-icon href="#"></a>
-	            <div class="uk-drop uk-background-default" data-uk-drop="mode: click; pos: left-center; offset: 0">
-	              <form class="uk-search uk-search-navbar uk-width-1-1">
-	                <input class="uk-search-input uk-text-demi-bold" type="search" placeholder="Search..." autofocus>
-	              </form>
-	            </div>
-	          </div>
-
-	          <div class="uk-navbar-item">
-	            <div><a class="uk-button uk-button-primary-light" href="/registration">Sign Up</a></div>
-	          </div>          
-	          <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span
-	            data-uk-navbar-toggle-icon></span></a>
-	        </div>
-	      </div>
-	    </div>
-	  </nav>
-	</div>
-
- </header>	
+                                               @if (Route::has('register'))
+                                               <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                               @endif
+                                             @endauth
+                                            </div>
+                                           @endif
+											</nav>
+										</div>
+										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="/contact">Join Now</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 
 
 			<div role="main" class="main">

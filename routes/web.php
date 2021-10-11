@@ -23,5 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/detail/{id}', [ CourseController::class, 'show'])->name('detail');
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
 Route::get('/contact', [ContactUsFormController::class, 'createForm']);
-
+Route::get('/register', [CustomAuthController::class, 'customRegistration']);
+Route::get('/login', [CustomAuthController::class, 'customLogin']);
 Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
