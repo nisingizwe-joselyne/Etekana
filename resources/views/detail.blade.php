@@ -34,14 +34,11 @@
                 <a href="/">Events</a>
                 </li>
 	            <li >
-	              <a href="#">Courses</a>
+	              <a href="#">Change language</a>
 	              <div class="uk-navbar-dropdown">
 	                <ul class="uk-nav uk-navbar-dropdown-nav">
-	                  <li ><a href="#">Course</a></li>
-	                  <li ><a href="#">Event</a></li>
-	                  <li ><a href="#">Search</a></li>
-	                  <li ><a href="/login">Sign In</a></li>
-	                  <li ><a href="/registration">Sign Up</a></li>
+	                  <li ><a href="#">English</a></li>
+	                  <li ><a href="#">Kinyarwanda</a></li>
 	                </ul>
 	              </div>            
 	            </li>
@@ -91,11 +88,10 @@
 								<span class="uk-rating-filled" data-uk-icon="icon: star"></span>
 								<span class="uk-rating-filled" data-uk-icon="icon: star"></span>
 								<span data-uk-icon="icon: star"></span>
-								<span class="uk-margin-small-left">4.0</span>
-								<span>(6,650)</span>
-								<span class="uk-margin-left">65,306 students enrolled</span>
+							
+
 							</div>
-							<p class="uk-margin-xsmall-top">Created by Tom Solender<span class="uk-margin-left">Last updated</span>
+							<p class="uk-margin-xsmall-top">Created by Joselyne<span class="uk-margin-left">Last updated</span>
 								<time datetime="2020-07-07">{{$course->created_at}}</time></p>
 						</div>
 					</div>
@@ -138,11 +134,11 @@
                 <table class="uk-table uk-table-justify uk-table-middle uk-table-divider">
                   <tbody>
                     <tr class="uk-text-primary">
-					@foreach($subtitles as $subtitle)   	
-                      <td class="uk-table-expand"><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="{{$subtitle->link}}" data-uk-toggle>{{$topic->subtopicone}}</a></td>
+					  	
+                      <td class="uk-table-expand"><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="#" data-uk-toggle>{{$topic->subtopicone}}</a></td>
                       <td><span data-uk-icon="unlock"></span></td>
                       <td class="uk-table-shrink">04:24</td>
-					@endforeach
+				
                     </tr>                
                   </tbody>
                 </table>

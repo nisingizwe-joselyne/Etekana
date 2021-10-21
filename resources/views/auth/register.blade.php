@@ -9,7 +9,7 @@
                     <h3 class="card-header text-center">Register User</h3>
                     <div class="card-body">
 
-                        <form action="{{ route('register.custom') }}" method="POST">
+                        <form action="/register" method="POST">
                             @csrf
                             <div class="form-group mb-3">
                                 <input type="text" placeholder="Name" id="name" class="form-control" name="name"
@@ -34,6 +34,14 @@
                                 <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif
                             </div>
+
+                          <div class="uk-width-1-1 uk-margin">
+                            <label class="uk-form-label" for="password">confirm password</label>
+                            <input id="password" name="password_confirmation" class="uk-input uk-form-large" type="password" placeholder="Min 8 characters">
+                               @error('password')
+                                <span style="color: red">{{$message}}</span> 
+                               @enderror
+                          </div>
 
                             <div class="form-group mb-3">
                                 <div class="checkbox">

@@ -86,15 +86,18 @@
 															Home
 														</a>
 													</li>
+													
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="demo-gym-classes.html">
+														<a class="dropdown-item dropdown-toggle" href="#">
 															Courses
 														</a>
-														@foreach($courses as $course)
+														
 														<ul class="dropdown-menu">
-															<li><a class="dropdown-item" href="/details/{{$course->id}}">{{$course->title}}</a></li>
+														    @foreach($courses as $course)
+															<li><a class="dropdown-item" href="/detail/{{$course->id}}">{{$course->title}}</a></li>
+															@endforeach
 														</ul>
-                                                        @endforeach
+                                                      
 													</li>
 													
 													<li>
@@ -102,23 +105,44 @@
 															Contact Us
 														</a>
 													</li>
-												</ul>
-										  @if (Route::has('login'))
-                                            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                             @auth
-                                               <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                                              @else
+													<li>
+													
+										 @if (Route::has('login'))
+                                          <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                            @auth
+											 <li class="nav-item dropdown">
+                                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                             {{ Auth::user()->name }}
+                                              </a>
+
+                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                             <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                 {{ __('Logout') }}
+                                              </a>
+
+                                              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                               @csrf
+                                              </form>
+                                              </div>
+                                             </li>
+											   
+                                         @else
                                                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
                                                @if (Route::has('register'))
                                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                                                @endif
-                                             @endauth
+                                          @endauth
                                             </div>
-                                           @endif
+                                        @endif
+													</li>
+												</ul>
+										
 											</nav>
 										</div>
-										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="/contact">Join Now</a>
+										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="{{ route('register') }}">Join Now</a>
 										
 									</div>
 								</div>
@@ -209,8 +233,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 p-0">
-                            <section class="parallax section section-parallax custom-parallax-bg-pos-left custom-sec-left h-100 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'horizontalPosition': '100%'}" data-image-src="img/demos/finance/parallax/parallax-1.jpg" style="min-height: 315px;">
-                                <img  src="{{asset('image/Capture.PNG')}}" alt />
+                            <section class="parallax section section-parallax custom-parallax-bg-pos-left custom-sec-left h-100 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'horizontalPosition': '100%'}" data-image-src="image/safe.jpg" style="min-height: 315px;">
+                                <!-- <img  src="{{asset('image/Capture.PNG')}}" alt /> -->
                             </section>
                         </div>
                         <div class="col-lg-6 p-0">
@@ -249,7 +273,7 @@
                             </section>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 p-0">
-                            <section class="parallax section section-parallax h-100 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'horizontalPosition': '100%'}" data-image-src="img/demos/finance/parallax/parallax-2.jpg" style="min-height: 315px;">
+                            <section class="parallax section section-parallax h-100 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'horizontalPosition': '100%'}" data-image-src="image/mysafe.jpg" style="min-height: 315px;">
                             
                                 <img class="p-4" src="{{asset('image/mysafe.jpg')}}" alt />
                             </section>
@@ -257,7 +281,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6 p-0">
-                            <section class="parallax section section-parallax custom-parallax-bg-pos-left custom-sec-left h-100 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'horizontalPosition': '100%'}" data-image-src="img/demos/finance/parallax/parallax-3.jpg" style="min-height: 315px;">
+                            <section class="parallax section section-parallax custom-parallax-bg-pos-left custom-sec-left h-100 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'horizontalPosition': '100%'}" data-image-src="image/sosial.jpg" style="min-height: 315px;">
                                 <img class="p-4" src="{{asset('image/sosial.jpg')}}" alt />
                             </section>
                         </div>

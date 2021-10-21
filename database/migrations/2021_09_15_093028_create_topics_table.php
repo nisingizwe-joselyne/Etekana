@@ -17,6 +17,7 @@ class CreateTopicsTable extends Migration
             $table->id();
             $table->unsignedBiginteger('course_id');
             $table->string('name');
+            $table->string('link');
             $table->timestamps();
             $table->foreign('course_id')->on('courses')->references('id')->onDelete('cascade')->onUpdate('cascade');
         });

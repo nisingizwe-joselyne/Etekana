@@ -18,9 +18,11 @@ class CourseController extends Controller
 
     public function show($id)
     { 
-        $topics = topic::all();
+        
         $subtitles = subtitle::all();
         $course = course::findOrFail($id);
+        $topics = topic::join('courses', 'topics.course_id', '=', 'courses.id')
+        ->select('topics.name')->where('topics.course_id','=',$course->id)->get();
         return view('detail',compact('course','topics','subtitles'));                                  
     }
 }
