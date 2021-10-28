@@ -16,13 +16,23 @@ class CourseController extends Controller
         return view('index',compact('courses','blogs'));
     }
 
+    public function watch($link){
+       $video = topic::join('courses', 'topics.course_id', '=', 'courses.id')
+       ->where('topics.link','=',$link)
+       ->select('topics.name', 'topics.link')
+       ->get();
+      
+      return view('watch-video');
+    }
+
     public function show($id)
     { 
         
         $subtitles = subtitle::all();
         $course = course::findOrFail($id);
         $topics = topic::join('courses', 'topics.course_id', '=', 'courses.id')
-        ->select('topics.name')->where('topics.course_id','=',$course->id)->get();
+        ->where('topics.course_id','=', $id)
+        ->select('topics.*', 'courses.title', 'courses.description', 'courses.content')->get();
         return view('detail',compact('course','topics','subtitles'));                                  
     }
 }

@@ -17,6 +17,12 @@ use App\Http\Controllers\ContactUsFormController;
 
 Route::get('/', [ CourseController::class, 'index']);
 
+Route::get('/watch/{link}', [CourseController::class, 'watch'])->name('watch');
+
+// Route::get('/see/{link}', function($link){
+//     return view('watch-video', compact('link'));
+// });
+
 Route::get('/register', [CustomAuthController::class, 'customRegistration']);
 Route::get('/login', [CustomAuthController::class, 'customLogin']);
 Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');

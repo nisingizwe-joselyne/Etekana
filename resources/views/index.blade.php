@@ -6,10 +6,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>my e-safety platform</title>	
+		<title>Etekana</title>	
 
-		<meta name="keywords" content="my e-safet" />
-		<meta name="description" content="my e-safet platform">
+		<meta name="keywords" content="e-tekana">
+		<meta name="description" content="e-tekana">
 		<meta name="author" content="okler.net">
 
 		<!-- Favicon -->
@@ -59,6 +59,14 @@
 		<!-- navbar -->
         <script src="{{ asset('front/js/uikit.js')}}"></script>
 	</head>
+
+ <script>
+  $(document).ready(function(){
+    $("#open").click(function(){
+      $("#show").toggle();
+    });
+       });
+  </script>
 	<body>
 
 		<div class="body">
@@ -70,8 +78,13 @@
 								<div class="header-row">
 									<div class="header-logo">
 										<a href="/">
-											Her e-safety
+											E-tekana
 										</a>
+									   <!-- <button type="button"  class="w-full block md:hidden lg:hidden" id="open">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="float-right bi bi-filter-right" viewBox="0 0 16 16">
+                                        <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
+                                        </svg>
+                                       </button> -->
 									</div>
 								</div>
 							</div>
@@ -81,15 +94,10 @@
 										<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-dropdown-no-borders header-nav-main-clone-items header-nav-main-slide header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
-													<li>
-														<a class="nav-link active" href="/">
-															Home
-														</a>
-													</li>
 													
 													<li class="dropdown">
 														<a class="dropdown-item dropdown-toggle" href="#">
-															Courses
+															Amasomo
 														</a>
 														
 														<ul class="dropdown-menu">
@@ -99,10 +107,12 @@
 														</ul>
                                                       
 													</li>
+
+																							
 													
 													<li>
 														<a class="nav-link" href="/contact">
-															Contact Us
+															Twandikire
 														</a>
 													</li>
 													<li>
@@ -129,10 +139,10 @@
                                              </li>
 											   
                                          @else
-                                               <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                                               <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">In</a>
 
                                                @if (Route::has('register'))
-                                               <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                               <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Iyandikishe</a>
                                                @endif
                                           @endauth
                                             </div>
@@ -142,7 +152,7 @@
 										
 											</nav>
 										</div>
-										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="{{ route('register') }}">Join Now</a>
+										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="{{ route('register') }}">Iyandikishe</a>
 										
 									</div>
 								</div>
@@ -185,7 +195,7 @@
 									data-start="800"
 									data-startslide="0"
 									data-endslide="99"
-									data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 50px;">Let's end Online Gender Based Violence Now</h1>
+									data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 50px;">Turwanye Ihohoterwa rishingiye ku gitsina ribera kuri interneti</h1>
 
 								<div class="tp-caption font-weight-normal text-color-light text-uppercase tp-static-layer"
 									data-x="center" data-hoffset="0"
@@ -193,7 +203,7 @@
 									data-start="800"
 									data-startslide="0"
 									data-endslide="99"
-									data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 12px;">By empowering women with digital security skills </div>
+									data-transform_in="y:[-300%];opacity:0;s:500;" style="font-size: 12px;">dutanga ubumenyi bwibanze k'umutekano wa digitale ku bakobwa</div>
 
 							</div>
 						</div>
@@ -204,11 +214,12 @@
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-10">
-								<h2 class="font-weight-bold text-color-quaternary appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><span class="text-color-primary">Get Up!</span> Secure your digital information yourself</h2>
-								<p class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="150"> We need to make attention on our safety especially in these time that technology is advancing ,the more the technology increase the more online criminals especially online GBV increase .so do you think that you need to know more about your online safety?
-                                don't worry!!Etekana platform is here for your digital security career and guidance.
+								<h2 class="font-weight-bold text-color-quaternary appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><span class="text-color-primary">Haguruka!</span> Urinde amakuru yawe  nibindi ukoresha kuri interineti</h2>
+								<p class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="150"> Dukeneye kongera ubushishozi ndetse tukizera ko umutekano wibintu dukorera
+									 kuri interneti umeze neza Cyane cyane muri iki gihe ikoreshwa rya interineti ryiyongereye cne.uko gukoresha interineti byiyongera niko abanyabyaha bo kuri interneti biyongera ndetse bakongera namayeri yo gukora ibyo byaha harimo nihohotera rishingiye ku gitsina.
+									 Urubuga rwa etekana rero ruhari kubwawe ngo rugufashe kwihugura mubijyanye numutekano wa digitale.
                                 </p>
-								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium text-2 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300" href="#">how it works</a>
+								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium text-2 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300" href="#">Bikora bite?</a>
 							</div>
 						</div>
 					</div>
@@ -218,8 +229,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-8 mb-3 mb-lg-0">
                                 <p class="text-color-light my-1">
-                                    we are  improving digital security skills in three main areas.
-                                    
+                                   Hamwe na etekana twibanda ku ngingo eshatu mu masomo yumutekano wa digitale
                                 </p>
                             </div>
                             <div class="col-lg-4 text-left text-lg-right">
@@ -241,15 +251,14 @@
                             <section class="section section-no-border h-100 ">
                                 <div class="row">
                                     <div class="col-half-section col-half-section-left">
-                                        <h2 class="text-uppercase mt-2 font-weight-bold">online data privacy</h2>
-                                        <p class="text-4 text-color-dark">what to know about this?</p>
-                                        <p class="custom-text-color-dark mb-4">with this area we help you to know the
-                                            basic skills to be protected  while connected to the Internet espacially 
-                                            your personal information as well as the device that you are using.
-                                            for instance how to know if the given link is trusted , site password management
-                                            who to share your information...   
-                                        </p>
-                                        <a href="/" class="btn btn-outline btn-primary custom-btn-style-2 font-weight-semibold text-color-dark text-uppercase mt-2">Read More</a>
+                                        <h2 class="text-uppercase mt-2 font-weight-bold">Umutekano w'amakuru yawe(Data privacy)</h2>
+                                        <p class="text-4 text-color-dark">Ese niki nkeneye kumenya kuri iyi ngingo?</p>
+                                        <p class="custom-text-color-dark mb-4">hamwe naka gace turagufasha kumenya 
+                                            ubuhanga bwibanze bwo kwirindira umutekano wa digitale mugihe urimo gukoresha enterineti cyane
+                                            amakuru yawe bwite hamwe n'bikoresho bya digitale dukoresha tubika amakuru.
+                                            nkurugero uburyo bwo kumenya niba link yatanzwe yizewe, gucunga ijambo ryibanga ryurubuga
+                                            ninde wo gusangira amakuru yawe...   
+	                             </p>
                                     </div>
                                 </div>
                             </section>
@@ -260,14 +269,10 @@
                             <section class="section section-no-border h-100 m-0">
                                 <div class="row justify-content-end m-0">
                                     <div class="col-half-section col-half-section-right custom-text-align-right">
-                                        <h2 class="text-uppercase mt-2 font-weight-bold">Device privacy</h2>
-                                        <p class="text-4 text-color-dark">What you can expect from this area?</p>
-                                        <p class="custom-text-color-dark mb-4">Device are very useful tools that we use while accessing internet 
-                                            communicating with our friends,some people are being hacked by another people and they hear every single
-                                            thing that you do on your phone this is so bad.
-                                            saving our data offline so with this area we give u  skills that can help you
-                                            to secure your data offline using device encryption if we say device we are including phones.</p>
-                                        <a href="/" class="btn btn-outline btn-primary custom-btn-style-2 font-weight-semibold text-color-dark text-uppercase mt-2">Read More</a>
+                                        <h2 class="text-uppercase mt-2 font-weight-bold">uko twakirinda ihohoterwa rishingiye ku gitsina kuri interneti</h2>
+                                        <p class="text-4 text-color-dark">Niki kingenzi uzamenya muri iyi ngingo?</p>
+                                        <p class="custom-text-color-dark mb-4">Hamwe n'iyi ngingo abakobwa bagiye kuvumbura ibintu byinshi bijyanye n'ihohoterwa rishingiye kugitsina hamwe nabundi bugizi bwa nabi bikorerwa kuri interneti bigira ingaruka kubagore nabakobwa muri societe yacu ,uko bikorwa nuburyo bwo kwirinda ibyo bitotezo </p>
+                                    
                                     </div>
                                 </div>
                             </section>
@@ -289,13 +294,12 @@
                             <section class="section section-no-border h-100 m-0">
                                 <div class="row m-0">
                                     <div class="col-half-section col-half-section-left">
-                                        <h2 class="text-uppercase mt-2 font-weight-bold">Social media privacy</h2>
-                                        <p class="text-4 text-color-dark"> what is in Social media privacy ?</p>
+                                        <h2 class="text-uppercase mt-2 font-weight-bold"> umutekano W'imbuga Nkoranyambaga</h2>
+                                        <p class="text-4 text-color-dark"> Kuki nkeneye kumenya ibyerekeye imbuga nkoranyambaga?</p>
                                         <p class="custom-text-color-dark mb-4">
-                                        as social media helps alot of people to to create and share content or to participate in social networking.
-                                    so here we are giving you the skills of how you can protect your social media account against hacker or other 
-                                people who want to use them in online harrasment .</p>
-                                        <a href="/" class="btn btn-outline btn-primary custom-btn-style-2 font-weight-semibold text-color-dark text-uppercase mt-2">Read More</a>
+										Imbuga nkoranyambaga zifasha abantu benshi gukora no gusangira ibitekerezo cyangwa kumenyana n'abantu batandukanye.
+										hano rero turaguha ubuhanga bwukuntu ushobora kurinda konte mbuga nkoranyambaga kwinjirirwa nabahacker cyangwa izindi
+                            tekinike abantu bakoresha mu ihohotera rikorewe kuri interneti .</p>
                                     </div>
                                 </div>
                             </section>
@@ -311,28 +315,26 @@
 						<div class="row justify-content-center">
 							<div class="col-sm-8 col-lg-4 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0">
 								<img src="{{asset('image/demos/gym/icons/trainer-colored.png')}}" class="mb-2" alt />
-								<h2 class="font-weight-bold text-color-quaternary"> Become a learner </h2>
-								<p>we train youthand our priorities are women who are interested in digital security. 
-                                 through different virtual channels like this platform,virtual events and so on for free.
-                                if you wish to become one of our trainee you can join us on every week events and
-                                 read the content found on this platform in courses section.</p>
-								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="/" title="join us">Register</a>
+								<h2 class="font-weight-bold text-color-quaternary"> Ba umwiga ku rubuga </h2>
+								<p>duhugura urubyiruko tukibanda cyane kubakobwa bashishikajwe numutekano wa digitale.
+                                 unyuze mumiyoboro itandukanye nkuru rubuga, amahugurwa ya online byose k'ubuntu.
+								 niba wifuza kuba umwe mubakurikirana amahugurwa yacu ushobora kwifatanya natwe mu mahugurwa aba rimwe mu cyumweru  kandi
+                                  Ukaba wakiyandikisha hano kurubuga.</p>
+								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="#" title="join us">iyandikishe</a>
 							</div>
 							<div class="col-sm-8 col-lg-4 custom-sm-margin-1 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
 								<img src="{{asset('img/demos/gym/icons/member-colored.png')}}" class="mb-2" alt />
-								<h2 class="font-weight-bold text-color-quaternary">Get online security assistance</h2>
-								<p>as our mission is to avoid online GBV we are always open to someone who had an issue 
-                                    while setting his security` either device or online security you can contact us for any inquiries,
-                         we are also here to help everyone who has been affected by online GBV to help her in being stable and behavior guidance .</p>
-								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="/" title="contact">contact us</a>
+								<h2 class="font-weight-bold text-color-quaternary">Bona ubufasha bwumutekano wa digitale</h2>
+								<p>nkinshingano zacu kwirinda Ihohoterwa rishingiye kugitsina dufite umwanya umuntu wagize ikibazo
+                         kijyanye numutekano wa digitale ashyirahoubundi agasubizwa nabandi uko babyumva we haba  kubikoresho cyangwa umutekano wa digitale. ushobora kutwandikira kubibazo byose,
+                         natwe turi hano kugirango dufashe abantu bose bagizweho ingaruka n'ihohoterwa ribera kuri interineti kugirango tumufashe gushikama no kwitwararika.</p>
+								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="/" title="contact">twandikire</a>
 							</div>
 							<div class="col-sm-8 col-lg-4 custom-sm-margin-1 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="600">
 								<img src="{{asset('img/demos/gym/icons/group-fitness-colored.png')}}" class="mb-2" alt />
-								<h2 class="font-weight-bold text-color-quaternary">Build your digitech career</h2>
-								<p>after completing the basic courses of ditital security and you have commitment in building your career 
-                                    in digital security we connect you with the right programs that are going to make you an expert 
-                                    so that you can start working in security industy  .</p>
-								<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="/" title="Learn More">Learn More</a>
+								<h2 class="font-weight-bold text-color-quaternary">ba umunyamwuga mu mutekano wa digitale</h2>
+								<p>nyuma yo kurangiza amasomo yibanze yumutekano wa digital kandi ufite ubushake bwo kuba wakora mu mutekano
+                                    mumutekano wa digitale tugufasha mu gufata amahugurwa yisumbuyeho ndetse tukanaguhuza nibigo bikeneye abakozi bumutekano wa digitale.</p>
 							</div>
 						</div>
 					</div>
@@ -342,39 +344,17 @@
 					<div class="row">
 						<div class="col-lg-4 p-0">
 							<section class="resources section-background custom-wide-section custom-small-section-padding-2 custom-overlay-style-2" style="background: url('img/demos/gym/carousels/resources.jpg'); background-size: cover;">
-								<h2 class="text-color-light font-weight-bold">Resources</h2>
+								<h2 class="text-color-light font-weight-bold">AMAKURU</h2>
 								<div class="owl-carousel custom-dots-style-2 custom-dots-bottom-left-1" data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
 									<div class="custom-resources-style">
 										<span class="number bg-color-primary text-color-light">1</span>
 										<span class="content">
 											<span class="title text-color-light">
-												How to get start
+												Natangira nte
 											</span>
-											<p>it is easy to start learning on our platform you have to sign up and start your 
-                                                course of preferance  and the language you want .you can also attend our weekly virtually learning session
-                                            where you get more demos</p>
-										</span>
-									</div>
-									<div class="custom-resources-style">
-										<span class="number bg-color-primary text-color-light">2</span>
-										<span class="content">
-											<span class="title text-color-light">
-												How to get start
-											</span>
-											<p>it is easy to start learning on our platform you have to sign up and start your 
-                                                course of preferance  and the language you want .you can also attend our weekly virtually learning session
-                                            where you get more demos</p>
-										</span>
-									</div>
-									<div class="custom-resources-style">
-										<span class="number bg-color-primary text-color-light">3</span>
-										<span class="content">
-											<span class="title text-color-light">
-												How to get start
-											</span>
-											<p>it is easy to start learning on our platform you have to sign up and start your 
-                                                course of preferance  and the language you want .you can also attend our weekly virtually learning session
-                                            where you get more demos</p>
+											<p>biroroshye gutangira kwiga kurubuga rwacu ugomba kwiyandikisha ugatangira kwiga ndetse
+                                                 ugahitamo nururimi ushaka.urashobora kandi kwitabira amahugurwa yacu ya online yo kwiga
+                                            aho ukura demo nyinshi</p>
 										</span>
 									</div>
 								</div>
@@ -382,27 +362,28 @@
 						</div>
 						<div class="col-lg-4 p-0">
 							<section class="working-hours section-background custom-wide-section custom-small-section-padding-2 custom-overlay-style-2" style="background: url('img/demos/gym/carousels/working-hour.jpg'); background-size: cover;">
-								<h2 class="text-color-light font-weight-bold"> learning event</h2>
+								<h2 class="text-color-light font-weight-bold">Igihe twiga online</h2>
 								<ul class="custom-list-style-1 pl-0">
 									<li>
-										<span class="custom-list-item custom-spacing-1 text-color-light custom-font-weight-medium">tuesday </span>
-										<span class="custom-list-value custom-text-color-1">: 6.00pm - 8.00pm</span>
+										<span class="custom-list-item custom-spacing-1 text-color-light custom-font-weight-medium">Kuwa kane</span>
+										<span class="custom-list-value custom-text-color-1">: 6.00pm - 7.00pm</span>
 									</li>
 									<li>
-										<span class="custom-list-item custom-spacing-1 text-color-light custom-font-weight-medium">thursday</span>
-										<span class="custom-list-value custom-text-color-1">: 6.00pm - 8.00pm</span>
+										<span class="custom-list-item custom-spacing-1 text-color-light custom-font-weight-medium">Kuwa kane</span>
+										<span class="custom-list-value custom-text-color-1">: 6.00pm - 7.00pm</span>
 									</li>
 									
 								</ul>
 							</section>
 						</div>
 						<div class="col-lg-4 p-0">
-							
+							<h1>Hindura ururimi</h1>
+							<div id="google_translate_element"></div>
 						</div>
 					</div>
 				</div>
 
-			</div>
+			</div>		
 			<!-- blog starting -->
 			@foreach($blogs as $blog)
      <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match uk-margin-medium-top" data-uk-grid>
@@ -411,9 +392,7 @@
           <div class="uk-card-media-top uk-inline uk-light">
             <img src="{{$blog->link}}" alt="Course Title">
             <div class="uk-position-cover uk-overlay-xlight"></div>
-            <div class="uk-position-small uk-position-top-left">
-              <span class="uk-label uk-text-bold uk-text-price">$27.00</span>
-            </div>
+            
             <div class="uk-position-small uk-position-top-right">
               <a href="#" class="uk-icon-button uk-like uk-position-z-index uk-position-relative" data-uk-icon="heart"></a>
             </div>            
@@ -452,13 +431,22 @@
 					</div>
 					<div class="row mt-2">
 						<div class="col-lg-12 text-center">
-							<p>2021@my e-safety <strong class="text-color-light font-weight-normal">your digital security partner</strong> Copyright All Rights Reserved.</p>
+							<p>2021@Etekana <strong class="text-color-light font-weight-normal">Her digital Safety Matter </strong> Copyright All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
 			</footer>
 			
 		</div>
+
+		
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'kin'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 		<!-- Vendor -->
 		<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -501,7 +489,7 @@
 
 		  <script type="text/javascript">
             function googleTranslateElementInit() {
-              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+              new google.translate.TranslateElement({pageLanguage: 'kiny'}, 'google_translate_element');
             }
             </script>
             

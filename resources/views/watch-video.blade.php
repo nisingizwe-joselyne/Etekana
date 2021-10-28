@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{$course->title}}</title>
+  <title>my title</title>
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" >
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&amp,display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('front/css/main.css')}}"/>
@@ -59,94 +59,10 @@
 
  </header>
 <!-- end of header -->
-<div >
-  <!-- content starting -->
- <header id="header">
-	<div class="uk-container uk-container-large">
-		<div class="uk-box-shadow-small uk-overflow-hidden uk-border-rounded uk-inline uk-background-center-center 
-		uk-background-cover uk-background-norepeat uk-background-blend-overlay uk-overlay-blend" 
-		style="background-image: url('{{asset('image/mysafe.jpg')}}');">
-			<div class="uk-padding-large">
-				<div data-uk-grid>
-					<div class="uk-width-expand@m uk-flex uk-flex-middle uk-light">
-						<div>
-							<a class="uk-text-demi-bold hvr-back" href="/"><span class="uk-margin-small-right" 
-								data-uk-icon="icon: arrow-left; ratio: 1.4"></span>Back</a>
-							<h1 class="uk-heading-small uk-letter-spacing-medium">{{$course->title}}</h1>
-							<p class="uk-margin-small-bottom">{{$course->description}}</p>
-							<div class="uk-rating">
-								<span class="uk-rating-filled" data-uk-icon="icon: star"></span>
-								<span class="uk-rating-filled" data-uk-icon="icon: star"></span>
-								<span class="uk-rating-filled" data-uk-icon="icon: star"></span>
-								<span class="uk-rating-filled" data-uk-icon="icon: star"></span>
-								<span data-uk-icon="icon: star"></span>
-							
 
-							</div>
-							<p class="uk-margin-xsmall-top">Created by Joselyne<span class="uk-margin-left">Last updated</span>
-								<time datetime="2020-07-07">{{$course->created_at}}</time></p>
-						</div>
-					</div>
-					<div class="uk-width-1-5@m"></div>
-					<div class="uk-width-1-3@m uk-flex uk-flex-middle">
-						<div class="uk-inline uk-light uk-border-rounded-large uk-box-shadow-small uk-overflow-hidden">
-							<img src="{{asset('image/ogbv.png')}}" alt="Video">
-							<div class="uk-position-center">
-								<a href="#course-video" class="uk-icon-link" data-uk-icon="icon: play-circle; ratio: 3" data-uk-toggle></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-<div id="course-video" class="uk-flex-top" data-uk-modal>
-	<div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-		<button class="uk-modal-close-outside" type="button" data-uk-close></button>
-		<iframe src="{{$course->picture}}" width="1000" height="562" data-uk-video></iframe>
-	</div>
-</div>
+my link
 
- <br/>
- <br/>
-  <div class="uk-container">
-    <div class="uk-grid-large" data-uk-grid>
-      <div class="uk-width-expand@m">
-        <div class="uk-article">
-          <h3>Description</h3>
-          <p>{{$course->content}}</p>
-       
 
-          <h3>Course content</h3>
-          <ul class="uk-margin-top" data-uk-accordion="multiple: true">
-		  @foreach($topics as $topic)  
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">{{$topic->name}}</a>
-              <div class="uk-accordion-content">
-                <table class="uk-table uk-table-justify uk-table-middle uk-table-divider">
-                  <tbody>
-                    <tr class="uk-text-primary">
-					  	
-                      <td class="uk-table-expand"><span class="uk-margin-small-right" data-uk-icon="play-circle"></span><a href="{{ route('watch', $topic->link)}}" data-uk-toggle>Watch Now!</a></td>
-
-					  
-                      <td><span data-uk-icon="unlock"></span></td>
-                      <td class="uk-table-shrink">5:30</td>
-				
-                    </tr>                
-                  </tbody>
-                </table>
-              </div>
-            </li>
-		  @endforeach
-          </ul>
-
-         
-    </div>
-  </div>
-  </div>
- </div>
- </div>
 <!-- footer -->
 <footer class="uk-section uk-section-secondary uk-section-large">
 	<div class="uk-container uk-text-muted">
